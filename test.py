@@ -5,4 +5,4 @@ def my_name(name: int = ""):
     print(name)
 
 
-my_name(nae=1.5)
+my_name(name=1.5)

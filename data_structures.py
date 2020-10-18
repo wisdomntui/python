@@ -23,11 +23,32 @@
 ############### SETS ########################
 set_a = {1, 3, 4, 5, 6}
 set_b = {0, 5, 2, 3, 7}
-print((set_a ^ set_b))
+# print((set_a | set_b))
 
 ############### DICTIONARIES #################
-my_dict = ["name", "age", "position"]
-my_dict2 = ["name", "age", "position"]
-#my_dict2["state"] = "asleep"
+question = ["name", "age", "position"]
+answer = ["wisdom", "20", "Senior Developer"]
 
-print(my_dict is not my_dict2)
+my_dict2 = {"name": "Okon", "age": 27, "position": "1st"}
+
+# for i, j in zip(question, answer):
+#     print('What is your {x}? My {x} is {y}'.format(x=i, y=j))
+
+# new_list = map(lambda q: q*3, question)
+# print(list(new_list))
+
+
+def get_name(**name):
+    return name
+
+
+print([('{key}:{val}'.format(key=x, val=y))
+       for x, y in get_name(name="wisdom", name1="King", name2="Heneh").items()])
+
+# print("name" not in my_dict2)
+
+################ LIST COMPREHENSIONS ##################
+
+
+SOME_LIST = [("W"*i) for i in range(10)]
+# print(SOME_LIST)
