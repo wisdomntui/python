@@ -42,8 +42,8 @@ def get_name(**name):
     return name
 
 
-print([('{key}:{val}'.format(key=x, val=y))
-       for x, y in get_name(name="wisdom", name1="King", name2="Heneh").items()])
+# print([('{key}:{val}'.format(key=x, val=y))
+#        for x, y in get_name(name="wisdom", name1="King", name2="Heneh").items()])
 
 # print("name" not in my_dict2)
 
@@ -57,4 +57,18 @@ SOME_LIST = [("W"*i) for i in range(10)]
 
 caller = "wisdom"
 
-print(F'Mr {caller} always calls the shots here')
+# print(F'Mr {caller} always calls the shots here')
+
+####################### ERRORS & EXCEPTIONS ##########################
+
+
+def div(a: int, b: int):
+    try:
+        result = (a/b)
+    except Exception as e:
+        print('There has been an error: ', e)
+    else:
+        print(f'The result of the division of {a} by {b} is: {result}')
+
+
+div(b=0, a=2)
