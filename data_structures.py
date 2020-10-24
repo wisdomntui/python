@@ -52,3 +52,9 @@ print([('{key}:{val}'.format(key=x, val=y))
 
 SOME_LIST = [("W"*i) for i in range(10)]
 # print(SOME_LIST)
+
+####################### INPUT OUTPUT ##################
+
+caller = "wisdom"
+
+print(F'Mr {caller} always calls the shots here')
