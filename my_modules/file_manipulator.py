@@ -21,5 +21,14 @@ class FileManipulator:
 
     # Read Content From File
     def read_file(self):
-        readd = self.__pointer.read()
-        return readd
+        try:
+            pointer = self.__pointer
+            counter = 1
+            for line in pointer:
+                print(f'{counter}. {line}')
+                counter += 1
+            pointer.close()
+        except Exception as e:
+            print(e)
+        # readd = self.__pointer.readline()
+        # return readd
