@@ -1,74 +1,89 @@
-############## LISTS ######################
+# ############## LISTS ######################
 
-# def set_list(message):
-#     some_list = input(message)
-#     some_list = list(some_list)
-#     return True
-
-
-# message = "Please enter a sequence of characters: "
-# my_list = [1, 2, 3, 4, 5, 5, 5, 5]
-# my_list.append(['insert', 'remove', 'extend', 'clear', 'pop', 'append'])
-# popped = my_list.pop(0)
-# print(popped, my_list.count(5), '')
-# del my_list
-# print(my_list)
+# # def set_list(message):
+# #     some_list = input(message)
+# #     some_list = list(some_list)
+# #     return True
 
 
-################ TUPLES #####################
-# my_tuple = (12345, 23457, 'hella'
-# print(my_tuple)
+# # message = "Please enter a sequence of characters: "
+# # my_list = [1, 2, 3, 4, 5, 5, 5, 5]
+# # my_list.append(['insert', 'remove', 'extend', 'clear', 'pop', 'append'])
+# # popped = my_list.pop(0)
+# # print(popped, my_list.count(5), '')
+# # del my_list
+# # print(my_list)
 
 
-############### SETS ########################
-set_a = {1, 3, 4, 5, 6}
-set_b = {0, 5, 2, 3, 7}
-# print((set_a | set_b))
-
-############### DICTIONARIES #################
-question = ["name", "age", "position"]
-answer = ["wisdom", "20", "Senior Developer"]
-
-my_dict2 = {"name": "Okon", "age": 27, "position": "1st"}
-
-# for i, j in zip(question, answer):
-#     print('What is your {x}? My {x} is {y}'.format(x=i, y=j))
-
-# new_list = map(lambda q: q*3, question)
-# print(list(new_list))
+# ################ TUPLES #####################
+# # my_tuple = (12345, 23457, 'hella'
+# # print(my_tuple)
 
 
-def get_name(**name):
-    return name
+# ############### SETS ########################
+# set_a = {1, 3, 4, 5, 6}
+# set_b = {0, 5, 2, 3, 7}
+# # print((set_a | set_b))
+
+# ############### DICTIONARIES #################
+# question = ["name", "age", "position"]
+# answer = ["wisdom", "20", "Senior Developer"]
+
+# my_dict2 = {"name": "Okon", "age": 27, "position": "1st"}
+
+# # for i, j in zip(question, answer):
+# #     print('What is your {x}? My {x} is {y}'.format(x=i, y=j))
+
+# # new_list = map(lambda q: q*3, question)
+# # print(list(new_list))
 
 
-# print([('{key}:{val}'.format(key=x, val=y))
-#        for x, y in get_name(name="wisdom", name1="King", name2="Heneh").items()])
-
-# print("name" not in my_dict2)
-
-################ LIST COMPREHENSIONS ##################
+# def get_name(**name):
+#     return name
 
 
-SOME_LIST = [("W"*i) for i in range(10)]
-# print(SOME_LIST)
+# # print([('{key}:{val}'.format(key=x, val=y))
+# #        for x, y in get_name(name="wisdom", name1="King", name2="Heneh").items()])
 
-####################### INPUT OUTPUT ##################
+# # print("name" not in my_dict2)
 
-caller = "wisdom"
-
-# print(F'Mr {caller} always calls the shots here')
-
-####################### ERRORS & EXCEPTIONS ##########################
+# ################ LIST COMPREHENSIONS ##################
 
 
-def div(a: int, b: int):
-    try:
-        result = (a/b)
-    except Exception as e:
-        print('There has been an error: ', e)
-    else:
-        print(f'The result of the division of {a} by {b} is: {result}')
+# SOME_LIST = [("W"*i) for i in range(10)]
+# # print(SOME_LIST)
+
+# ####################### INPUT OUTPUT ##################
+
+# caller = "wisdom"
+
+# # print(F'Mr {caller} always calls the shots here')
+
+# ####################### ERRORS & EXCEPTIONS ##########################
 
 
-div(b=0, a=2)
+# def div(a: int, b: int):
+#     try:
+#         result = (a/b)
+#     except Exception as e:
+#         print('There has been an error: ', e)
+#     else:
+#         print(f'The result of the division of {a} by {b} is: {result}')
+
+
+# div(b=0, a=2)
+
+#####################  OOP #######################################
+from my_modules.modules import Car
+
+
+class Sedan (Car):
+    """ Sedan Class Extends Car Class """
+
+    # Sedan Constructor
+    def __init__(self, brand, model, colour):
+        super().__init__(brand, model, colour)
+
+
+toyota_corolla = Sedan("Toyota", "Corolla", "Green")
+toyota_corolla.get_car()
